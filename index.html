@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press the button</title>
+    <h1>Gali's website</h1>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        #changeColorButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hello, HTML with CSS and JavaScript!</h1>
+<h1>Press the button</h1>
+    <button id="changeColorButton">Change Background Color</button>
+
+    <script>
+        // JavaScript code to change the background color
+        document.getElementById("changeColorButton").addEventListener("click", function() {
+            changeBackgroundColor();
+        });
+
+        function changeBackgroundColor() {
+            // Generate a random color
+            var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            
+            // Apply the color to the body background
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+
+</body>
+</html>
